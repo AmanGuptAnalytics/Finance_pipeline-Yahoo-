@@ -4,7 +4,7 @@ from yahoofinancials import YahooFinancials
 
 @dlt.source
 def yahoofin(start_date='2022-01-01',end_date='2022-03-01'):
-    since_date = dlt.state().setdefault("end_date", {})
+    since_date = dlt.state()
     print('The date is as follows', since_date)
     return currency_exchange(start_date, end_date )
 
