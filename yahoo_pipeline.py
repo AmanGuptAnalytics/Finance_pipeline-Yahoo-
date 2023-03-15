@@ -10,7 +10,6 @@ def yahoofin(start_date='2022-02-01',end_date='2022-03-01'):
 @dlt.resource(write_disposition="append")
 def currency_exchange(start_date,end_date ):
     curr_pair=['USDINR=X']
-    print("this is the state", dlt.state().setdefault("last_loaded_date",[]))
     s = dlt.state().setdefault("incremental_dict", {'last_loaded_date':'1970-01-01'})
     print('what we got in state or default ',s)
     s['last_loaded_date'] = '2021-01-01'
