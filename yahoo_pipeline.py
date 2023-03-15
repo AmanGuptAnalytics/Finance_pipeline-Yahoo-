@@ -11,10 +11,9 @@ def yahoofin(start_date='2022-02-01',end_date='2022-03-01'):
 def currency_exchange(start_date,end_date ):
     curr_pair=['USDINR=X']
     print('This is the end date', end_date)
-    dt = dlt.state().setdefault("date", [])
+    dt = dlt.state().setdefault("date", '1970-01-01')
     print('what we got in state or default ',dt)
-    dlt.state()["date"] = '2021-2-12'
-    dt= dlt.state().setdefault("date", [])
+    dlt.state()["date"] = '2021-02-12'
     print('what we set to state',dt)
 
     yahoo_financials_currency = YahooFinancials(curr_pair)
